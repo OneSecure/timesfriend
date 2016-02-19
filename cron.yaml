@@ -1,0 +1,4 @@
+cron:
+- description: time report every hour robot
+  url: /retrievedata
+  schedule: every 1 hours synchronized
