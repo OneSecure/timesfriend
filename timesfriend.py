@@ -18,8 +18,6 @@ PASSWORD = u'password'
 
 #------------------------------------------------------------------------------
 def postWeibo():
-	#respHtml = unicode(respHtml, "utf-8")
-
 	from weibo_tiny import Client
 	client = Client(APP_KEY, APP_SECRET, REDIRECT_URL, username=USERNAME, password=PASSWORD)
 
@@ -29,9 +27,11 @@ def postWeibo():
 
 	out = chinaTime.strftime("%H:%M")
 
-	options = { 23:u"子时", 00:u"子时", 01:u"丑时", 02:u"丑时", 03:u"寅时", 04:u"寅时", 05:u"卯时", 06:u"卯时", 
-				07:u"辰时",  8:u"辰时",  9:u"巳时", 10:u"巳时", 11:u"午时", 12:u"午时", 13:u"未时", 14:u"未时", 
-				15:u"申时", 16:u"申时", 17:u"酉时", 18:u"酉时", 19:u"戍时", 20:u"戍时", 21:u"亥时", 22:u"亥时",  }
+	# https://tw.answers.yahoo.com/question/index?qid=20110701000016KK09368
+	# 古代中国将一昼夜分为 12 个时辰，每个时辰分为 八刻. 每刻相当于现在的 15 分钟，所以 15分 钟又叫一刻钟, 午时三刻指的是午初三刻, 即11点45分. 
+	options = { 23:u"子初", 00:u"子正", 01:u"丑初", 02:u"丑正", 03:u"寅初", 04:u"寅正", 05:u"卯初", 06:u"卯正", 
+				07:u"辰初",  8:u"辰正",  9:u"巳初", 10:u"巳正", 11:u"午初", 12:u"午正", 13:u"未初", 14:u"未正", 
+				15:u"申初", 16:u"申正", 17:u"酉初", 18:u"酉正", 19:u"戍初", 20:u"戍正", 21:u"亥初", 22:u"亥正",  }
 
 	info = u'======== 【' + options[chinaTime.hour] + u'】 =  ' + out + u'  ========' 
 	client.post('statuses/update', status=info)
