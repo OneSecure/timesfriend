@@ -1,5 +1,5 @@
 [时间的朋友](http://weibo.com/timesfriend/) 整点报时机器人
 ==========
 
-整点 发送 一条 报时 微博， 提醒刷微博的人，时间的流逝，我是时间的朋友，我也是你的朋友。
+每逢整点 发送 一条 报时 微博， 提醒正在刷 [微博](http://weibo.com/timesfriend/) 或者 [Twitter](https://twitter.com/timefriendclock/) 的您，时间的流逝。我是时间的朋友，也是您的朋友。
 
