@@ -36,6 +36,9 @@ def postWeibo():
 	info = u'======== 【' + options[chinaTime.hour] + u'】 =  ' + out + u'  ========' 
 	client.post('statuses/update', status=info)
 
+	from tweetpost import postTweet
+	postTweet(info)
+
 ###############################################################################
 if __name__=="__main__":
 	postWeibo()
