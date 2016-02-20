@@ -10,11 +10,15 @@ from google.appengine.api import mail
 from datetime import datetime
 
 from timesfriend import postWeibo
+from timesfriend import generateTweet
      
 class DataRetriever(webapp2.RequestHandler):
-    def get(self):
-        postWeibo()
+	def get(self):
+		info = generateTweet()
+		postWeibo(info)
 
+		from tweetpost import postTweet
+		postTweet(info)
 
 APP = webapp2.WSGIApplication(
         [
