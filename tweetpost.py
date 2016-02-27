@@ -16,4 +16,4 @@ def postTweet(text):
 	except tweetpony.APIError as err:
 		print "Oops, something went wrong! Twitter returned error #%i and said: %s" % (err.code, err.description)
 	else:
-		print "Yay! Your tweet has been sent!"
+		pass #print "Yay! Your tweet has been sent!"
