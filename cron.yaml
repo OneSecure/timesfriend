@@ -1,4 +1,7 @@
 cron:
-- description: time report every hour robot
-  url: /retrievedata
+- description: weibo time every hour robot
+  url: /posttimetoweibo
+  schedule: every 1 hours synchronized
+- description: tweet time every hour robot
+  url: /posttimetotwitter
   schedule: every 1 hours synchronized

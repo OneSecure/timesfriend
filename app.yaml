@@ -9,7 +9,11 @@ libraries:
   version: latest
 
 handlers:
-- url: /retrievedata
+- url: /posttimetoweibo
+  script: main.APP
+  login: admin
+
+- url: /posttimetotwitter
   script: main.APP
   login: admin
 
